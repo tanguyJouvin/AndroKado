@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/editProduit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+    <TextView
+        android:id="@+id/editPrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editProduit"
+        app:layout_constraintLeft_toLeftOf="@+id/editProduit"
+        android:layout_marginTop="20dp"
+         />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editPrix"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:numStars="4"
+        android:isIndicator="false"
+        android:layout_marginRight="10dp"
+         />
+
+    <TextView
+        android:id="@+id/editDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editPrix"
+        app:layout_constraintLeft_toLeftOf="@+id/editPrix"
+        android:layout_marginTop="10dp" />
+
+    <ImageButton
+        android:id="@+id/buttonUrl"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent=".5"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/planet"
+        android:onClick="toActivityInfoUrl"
+      />
+
+    <ToggleButton
+        android:id="@+id/etatButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent=".5"
+        android:textOn="acheté"
+        android:textOff="a acheté"
+        app:layout_constraintTop_toTopOf="@+id/buttonUrl"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonUrl"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="changeState"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

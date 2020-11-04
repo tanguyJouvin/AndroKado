@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroKado</string>
+    <string name="nom_objet">Pain au chocolat</string>
+    <string name="prix_objet">1.0 €</string>
+    <string name="description_objet">Une viennoiserie au beurre et au chocolat</string>
+    <string name="note_objet">4/5</string>
+    <string name="url_objet">https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pain_au_chocolat_Luc_Viatour.jpg/1200px-Pain_au_chocolat_Luc_Viatour.jpg</string>
+
+</resources>
+
