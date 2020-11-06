@@ -15,12 +15,14 @@ public class InfoUrlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_url);
-//Je récupère l'intent de l'activité A avec la clé "article"
+
+        //Je récupère l'intent de l'activité A avec la clé "article"
         Intent intent = getIntent();
         Article article = intent.getParcelableExtra("payload");
 
-        TextView tv = findViewById(R.id.text_view_info_url);
+        TextView tv = findViewById(R.id.tv_info);
         tv.setText(article.getUrl());
         Log.i("TAG", "Nous sommes dans la fonction onCreate côté seconde activité");
     }
+
 }
