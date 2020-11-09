@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 public class Article implements Parcelable {
 
+    private int id;
     private String nom;
     private Float prix;
     private String description;
@@ -12,6 +13,10 @@ public class Article implements Parcelable {
     private String url;
     private Boolean etat;
 
+    //générer un constructeur vide
+    public Article() {}
+
+    //générer un constructeur vide sans id en paramètre !!! Jamais !!!
     public Article(String nom, Float prix, String description, Float note, String url, Boolean etat) {
         this.nom = nom;
         this.prix = prix;
@@ -75,6 +80,14 @@ public class Article implements Parcelable {
             return new Article[size];
         }
     };
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNom() {
         return nom;
