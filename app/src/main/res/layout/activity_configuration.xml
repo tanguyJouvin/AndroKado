@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfigurationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_config"
+        app:title="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/bleu_500"
+        />
+
+    <TextView
+        android:id="@+id/textTri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Tri par prix"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:id="@+id/textPrixDefaut"
+        android:text="Prix par défaut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textTri"
+        app:layout_constraintLeft_toLeftOf="@id/textTri"
+        android:layout_marginTop="40dp"
+        />
+
+    <Switch
+        android:id="@+id/switch_tri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/textTri"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="50dp"
+       />
+
+
+
+    <EditText
+        android:id="@+id/textPrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/switch_tri"
+        app:layout_constraintTop_toTopOf="@id/textPrixDefaut" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sauvegarder"
+        android:layout_marginTop="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textPrix"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

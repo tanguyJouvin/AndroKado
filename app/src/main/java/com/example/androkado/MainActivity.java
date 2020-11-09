@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_detail, menu);
@@ -74,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void changeState(View view){
-
         ToggleButton acheteview = (ToggleButton) view;
         Log.i(TAG, "tu as bien changé l'état de l'article");
         article.setEtat(acheteview.isChecked());

@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 
 import com.example.androkado.adapter.OnClicSurUnItem;
@@ -70,4 +72,19 @@ public class ListeArticleActivity extends AppCompatActivity implements OnClicSur
         getMenuInflater().inflate(R.menu.mon_menu, menu);
         return true;
     }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.bouton_configurer: {
+                Intent intent = new Intent(this, ConfigurationActivity.class);
+                startActivity(intent);
+            }
+            case R.id.bouton_add: {
+                Toast.makeText(this, "pas encore fait", Toast.LENGTH_SHORT).show();
+            }
+        }
+        return true;
+    }
+
+
 }
