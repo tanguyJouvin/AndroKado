@@ -19,6 +19,12 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
     private List<Article> mDataset;
     public OnClicSurUnItem action;
 
+    /**
+     * Affiche une card avec le nom de l'article et le rating
+     * @param v
+     * @param data
+     * @param activite
+     */
     public  ViewHolder(View v, List<Article> data, OnClicSurUnItem activite)
     {
         super(v);

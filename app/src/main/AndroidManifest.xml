@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroKado">
-        <activity android:name=".ConfigurationActivity"></activity>
+        <activity android:name=".AjoutArticleActivity"></activity>
+        <activity android:name=".ConfigurationActivity" />
         <activity android:name=".ListeArticleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

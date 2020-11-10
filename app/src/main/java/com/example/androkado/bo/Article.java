@@ -26,7 +26,9 @@ public class Article implements Parcelable {
         this.etat = etat;
     }
 
+
     protected Article(Parcel in) {
+        id = in.readInt();
         nom = in.readString();
         if (in.readByte() == 0) {
             prix = null;
@@ -46,6 +48,7 @@ public class Article implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
         dest.writeString(nom);
         if (prix == null) {
             dest.writeByte((byte) 0);
@@ -139,8 +142,8 @@ public class Article implements Parcelable {
 
     @Override
     public String toString() {
-        return "Article{" +
-                "nom='" + nom + '\'' +
+        return "Article{ : " +
+                " nom='" + nom + '\'' +
                 ", prix=" + prix +
                 ", description='" + description + '\'' +
                 ", note=" + note +
@@ -148,5 +151,4 @@ public class Article implements Parcelable {
                 ", etat=" + etat +
                 '}';
     }
-
 }

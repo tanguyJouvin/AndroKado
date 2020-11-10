@@ -48,10 +48,11 @@ public class RecycleAdapter extends RecyclerView.Adapter<ViewHolder>
      * @param position
      */
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position)
+    {
+
         holder.mTextView.setText(mDataset.get(position).getNom());
         holder.mRatingView.setRating(mDataset.get(position).getNote());
-
     }
 
     /**

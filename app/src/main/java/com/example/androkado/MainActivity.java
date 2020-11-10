@@ -19,13 +19,17 @@ import android.widget.ToggleButton;
 
 import com.example.androkado.adapter.RecycleAdapter;
 import com.example.androkado.bo.Article;
+import com.example.androkado.dao.ArticleDao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "AndroKado";
     private Article article;
+    private List<Article> articles;
+    private ArticleDao dao ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         //implémentation de la toolbar et injection ds la vue
         Toolbar myTb = findViewById(R.id.toolbar_detail);
         setSupportActionBar(myTb);
+
+        dao = new ArticleDao(this);
+
+
+        articles = dao.get();
+        for(Article article : articles){
+            article.getNom();
+        }
 
         TextView titre = findViewById(R.id.editProduit);
         titre.setText(article.getNom());
@@ -54,6 +66,18 @@ public class MainActivity extends AppCompatActivity {
         ToggleButton acheteView = findViewById(R.id.etatButton);
         acheteView.setChecked(article.getEtat());
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        dao = new ArticleDao(this);
+        //  infos = new ArrayList<Article>();
+        articles = dao.get();
+        for(Article article : articles){
+            article.getNom();
+            Log.i("taztg",    article.getNom());
+        }
     }
 
     @Override
